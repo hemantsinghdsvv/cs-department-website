@@ -3,16 +3,14 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",  // if using Next.js app directory
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        iitb: {
-          blue: "#003366",
-          lightblue: "#336699",
-          gray: "#f5f5f5",
-        },
+        iitbblue: "#003366",       // dark IITB blue
+        iitblightblue: "#336699",  // lighter IITB blue
+        iitbgray: "#f5f5f5",       // light gray
       },
       fontFamily: {
         heading: ["Georgia", "Times New Roman", "Times", "serif"],

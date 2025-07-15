@@ -1,21 +1,14 @@
 import Head from "next/head";
-import TopHeaderBar from "../components/TopHeaderBar";
 import HeroSection from "../components/HeroSection";
 import QuickLinksSection from "../components/QuickLinksSection";
-import NewsEventsSection from "../components/NewsEventsSection";
-import Sidebar from "../components/Sidebar";
-import AnnouncementCard from "../components/AnnouncementCard";
-import EventCard from "../components/EventCard";
-import announcements from "../data/announcements.json";
-import events from "../data/events.json";
+import EventsSection from "@/components/EventsSection";
+import NewsSection from "@/components/NewsSection";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (
     <>
-      <TopHeaderBar />
-      
-      <>
-   <Head>
+      <Head>
         <title>Department of Computer Science | Your University</title>
         <meta
           name="description"
@@ -45,28 +38,25 @@ export default function Home() {
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-  <HeroSection />
-<QuickLinksSection />
 
- 
- <section className="bg-gray-50 py-8">
-  <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row md:space-x-6">
-    {/* Main Content */}
-    <div className="md:w-2/3 w-full mb-6 md:mb-0">
-      <NewsEventsSection />
-    </div>
+      <HeroSection />
+      <QuickLinksSection />
+      <Banner />
 
-    {/* Sidebar */}
-    <div className="md:w-1/3 w-full">
-      <Sidebar />
-    </div>
-  </div>
-</section>
+      <section className="bg-gray-50 py-8">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Events Section */}
+          
+            <EventsSection />
+         
 
-</>
-
-
-      
+          {/* News & Announcements Section */}
+         
+           
+            <NewsSection />
+        
+        </div>
+      </section>
     </>
   );
 }

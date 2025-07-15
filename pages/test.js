@@ -1,10 +1,10 @@
 export default function Test() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-iitb-gray">
-      <h1 className="text-iitb-blue text-4xl font-heading mb-4">
-        ✅ IIT Bombay Blue Text
+    <div className="min-h-screen flex flex-col items-center justify-center bg-iitbgray">
+      <h1 className="text-4xl font-heading text-iitbblue mb-4">
+        This is IITB Blue
       </h1>
-      <button className="bg-iitb-blue hover:bg-iitb-lightblue text-white px-6 py-3 rounded">
+      <button className="px-6 py-3 bg-iitbblue text-white rounded hover:bg-iitblightblue transition">
         Hover Me
       </button>
     </div>
