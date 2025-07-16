@@ -55,7 +55,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mt-4 text-xs text-gray-300">
           <p>© {new Date().getFullYear()} Department of Computer Science, DSVV. All Rights Reserved.</p>
           <p>
-            Designed & Developed by{" "}
+            Powered by{" "}
             <a
               href="https://www.dsvv.ac.in/"
               className="underline hover:text-[#FFCC00]"
