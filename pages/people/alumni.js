@@ -11,7 +11,7 @@ export default function AlumniPage() {
   const [yearFilter, setYearFilter] = useState("");
   const [courseFilter, setCourseFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 41;
 
   const SHEET_ID = "1JBUqbTDb3M7-_CDT7d3RLDE9aHqJ-xYyp-NEwBrkjsI";
   const API_KEY = "AIzaSyDg9B_gV-In-tti3OqXc0Dhu1M-bl0R4Gk";
