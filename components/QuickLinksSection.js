@@ -6,23 +6,23 @@ import { CalendarIcon, DocumentTextIcon, AcademicCapIcon, UsersIcon } from "@her
 const quickLinks = [
   {
     title: "Academic Calendar",
-    href: "/calendar",
-    icon: <CalendarIcon className="h-6 w-6 text-blue-900" />,
+    href: "/utilities/calendar",
+    icon: <CalendarIcon className="h-10 w-10 text-blue-900" />,
   },
   {
     title: "Admissions Open",
     href: "/admissions",
-    icon: <DocumentTextIcon className="h-6 w-6 text-blue-900" />,
+    icon: <DocumentTextIcon className="h-10 w-10 text-blue-900" />,
   },
   {
     title: "Placements",
     href: "/placements",
-    icon: <AcademicCapIcon className="h-6 w-6 text-blue-900" />,
+    icon: <AcademicCapIcon className="h-10 w-10 text-blue-900" />,
   },
   {
     title: "Alumni Network",
     href: "/alumni",
-    icon: <UsersIcon className="h-6 w-6 text-blue-900" />,
+    icon: <UsersIcon className="h-10 w-10 text-blue-900" />,
   },
 ];
 

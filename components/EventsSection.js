@@ -22,6 +22,12 @@ const events = [
     description: "Guest lecture by Dr. Raghav on advancements in Quantum Computing research.",
     link: "/events/quantum-computing",
   },
+   {
+    title: "Webinar on Artificial Intelligence",
+    date: "2025-08-05",
+    description: "Webinar by Dr. Raghav on advancements in Artificial Intelligence research.",
+    link: "/events/quantum-computing",
+  },
 ];
 
 // Utility to format date into { day, month }

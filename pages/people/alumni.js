@@ -155,13 +155,13 @@ export default function AlumniPage() {
                   <p>
                     <span className="font-medium text-gray-900">Course:</span> {alum.course}
                   </p>
-                  {/*
+                  {
       {alum.mobile && (
         <p>
           <span className="font-medium text-gray-900">Mobile:</span> {alum.mobile}
         </p>
       )}
-      */}
+    }
                   {alum.email && (
                     <p>
                       <span className="font-medium text-gray-900">Email:</span>{" "}
