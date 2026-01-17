@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Download, ExternalLink, Linkedin, BookOpen, GraduationCap, Building2 } from "lucide-react";
+import { Mail, Phone, MapPin, Download, ExternalLink, Linkedin, BookOpen, GraduationCap, Building2, Users } from "lucide-react";
 
 export default function FacultyProfile() {
     const params = useParams();

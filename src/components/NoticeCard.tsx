@@ -46,10 +46,10 @@ export function NoticeCard({ notice }: NoticeCardProps) {
           </div>
         </div>
         
-        {notice.attachmentUrl && (
+        {notice.fileUrl && (
             <div className="mt-4 pt-4 border-t border-slate-100 flex justify-end">
                 <a 
-                    href={notice.attachmentUrl} 
+                    href={notice.fileUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-xs font-bold text-primary hover:text-accent flex items-center gap-1 transition-colors"

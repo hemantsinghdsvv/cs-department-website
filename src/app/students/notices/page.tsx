@@ -69,7 +69,7 @@ export default function NoticesPage() {
                                     </div>
                                     <div>
                                         <div className="flex flex-wrap gap-2 items-center mb-1">
-                                            <Badge variant="secondary" className="text-xs font-normal capitalize">{notice.category || notice.type || 'General'}</Badge>
+                                            <Badge variant="secondary" className="text-xs font-normal capitalize">{notice.type || 'General'}</Badge>
                                             <span className="text-xs text-slate-400">
                                                 {notice.date ? format(notice.date.toDate(), "dd MMM yyyy") : "Recent"}
                                             </span>

@@ -14,7 +14,7 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
         <div className="flex items-start gap-6">
           <div className="h-20 w-20 rounded-2xl overflow-hidden shrink-0 border-2 border-slate-100 shadow-sm ring-4 ring-slate-50 group-hover:ring-accent/20 transition-all duration-500">
             <img
-              src={alumni.imageUrl || "/alumni-placeholder.jpg"}
+              src={alumni.image || "/alumni-placeholder.jpg"}
               alt={alumni.name}
               className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
@@ -24,7 +24,7 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
               {alumni.name}
             </h3>
             <p className="text-sm font-bold text-slate-700 uppercase tracking-wide">
-              {alumni.currentRole}
+              {alumni.designation}
             </p>
             <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
               <Briefcase className="h-3.5 w-3.5 text-accent" />
@@ -49,9 +49,9 @@ export function AlumniCard({ alumni }: AlumniCardProps) {
             <span>Class of {alumni.batch}</span>
           </div>
           <div className="flex gap-2">
-            {alumni.linkedinUrl && (
+            {alumni.linkedin && (
               <a 
-                href={alumni.linkedinUrl} 
+                href={alumni.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 hover:bg-slate-100 rounded-lg transition-colors text-slate-400 hover:text-[#0077b5]"

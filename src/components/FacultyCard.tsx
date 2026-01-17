@@ -12,7 +12,7 @@ export function FacultyCard({ faculty }: FacultyCardProps) {
     <Card className="overflow-hidden group hover:shadow-lg transition-all duration-300 border-slate-200">
       <div className="aspect-[4/5] relative overflow-hidden bg-slate-100">
         <img
-          src={faculty.imageUrl || "/faculty-placeholder.jpg"}
+          src={faculty.image || "/faculty-placeholder.jpg"}
           alt={faculty.name}
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
         />

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cs.youruniversity.ac.in
+
+# Sitemaps
+Sitemap: https://cs.youruniversity.ac.in/sitemap.xml
