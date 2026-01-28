@@ -102,15 +102,19 @@ export function Header() {
             <div className="container max-w-7xl mx-auto flex h-20 items-center justify-between px-4 sm:px-6 lg:px-8">
                 
                 {/* Logo Section */}
-                <div className="flex-shrink-0 flex items-center pr-8 border-r border-slate-100 mr-4 h-full">
-                    <Link href="/" className="flex items-center gap-3 group">
-                        <img src="/logo.png" alt="DSVV Logo" className="h-10 w-auto drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
+                {/* Logo Section */}
+                <div className="flex-shrink-0 flex items-center pr-4 md:pr-8 border-r border-slate-100 mr-2 md:mr-4 h-full">
+                    <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+                        <img src="/logo.png" alt="DSVV Logo" className="h-8 md:h-10 w-auto drop-shadow-sm group-hover:scale-105 transition-transform duration-300" />
                         <div className="flex flex-col">
-                            <span className="text-xl font-bold tracking-tight text-primary font-heading group-hover:text-primary/80 transition-colors">
+                            <span className="text-sm md:text-xl font-bold tracking-tight text-primary font-heading group-hover:text-primary/80 transition-colors leading-tight">
                                 Department Of Computer Science
                             </span>
-                            <span className="text-[10px] font-bold text-accent uppercase tracking-[0.2em] leading-none text-slate-500">
+                            <span className="text-[9px] md:text-[10px] font-bold text-accent uppercase tracking-[0.1em] md:tracking-[0.2em] leading-none text-slate-500 hidden sm:block">
                                 Dev Sanskriti Vishwavidyalaya
+                            </span>
+                            <span className="text-[8px] font-bold text-accent uppercase tracking-[0.1em] leading-none text-slate-500 sm:hidden">
+                                DSVV, Haridwar
                             </span>
                         </div>
                     </Link>
