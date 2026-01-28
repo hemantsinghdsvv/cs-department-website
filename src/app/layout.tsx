@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google"; // Assuming Outfit is used for headings
+import { Inter, Plus_Jakarta_Sans } from "next/font/google"; 
 import "./globals.css";
 import MainLayoutWrapper from "@/components/layout/MainLayoutWrapper";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-// Using Outfit as the heading font as per previous context
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-heading" });
+// Plus Jakarta Sans: modern, geometric sans-serif similar to Inter but optimized for display/headings
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
   title: "Department of Computer Science - DSVV",
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${outfit.variable} font-sans antialiased bg-slate-50`}>
+      <body className={`${inter.variable} ${jakarta.variable} font-sans antialiased bg-slate-50`}>
         <MainLayoutWrapper>
           {children}
         </MainLayoutWrapper>

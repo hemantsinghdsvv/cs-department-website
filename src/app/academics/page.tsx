@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
-import { BookOpen, Calendar, Download, GraduationCap, FileText, CheckCircle2, Clock, Award, Search, Book } from "lucide-react";
+import { BookOpen, Calendar, Download, GraduationCap, FileText, CheckCircle2, Clock, Award, Search, Book, User } from "lucide-react";
 import Link from "next/link";
 
 // Mock Data for Curriculum
@@ -111,7 +111,7 @@ export default function AcademicsPage() {
                                     <GraduationCap className="h-5 w-5 text-primary mt-1" />
                                     <div>
                                         <h4 className="font-semibold text-slate-900">Intake</h4>
-                                        <p className="text-sm text-slate-500">60 Seats</p>
+                                        <p className="text-sm text-slate-500">25 Seats</p>
                                     </div>
                                 </div>
                             </div>
@@ -153,9 +153,9 @@ export default function AcademicsPage() {
                             </CardHeader>
                             <CardContent>
                                 <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-4">
-                                    <li>Passed 10+2 with Mathematics.</li>
-                                    <li>Minimum 50% aggregate marks.</li>
-                                    <li>University Entrance Test Score.</li>
+                                    <li>12th Pass with min 50% marks.</li>
+                                    <li>Recognized Board (10+2).</li>
+                                    <li>Max Age: 22 Years.</li>
                                 </ul>
                             </CardContent>
                         </Card>
@@ -231,7 +231,7 @@ export default function AcademicsPage() {
                                     <GraduationCap className="h-5 w-5 text-primary mt-1" />
                                     <div>
                                         <h4 className="font-semibold text-slate-900">Intake</h4>
-                                        <p className="text-sm text-slate-500">60 Seats</p>
+                                        <p className="text-sm text-slate-500">25 Seats</p>
                                     </div>
                                 </div>
                             </div>
@@ -257,8 +257,9 @@ export default function AcademicsPage() {
                             </CardHeader>
                             <CardContent>
                                 <ul className="space-y-2 text-sm text-muted-foreground list-disc pl-4">
-                                    <li>Passed 10+2 with Maths/Comp. App.</li>
-                                    <li>Minimum 50% aggregate marks.</li>
+                                    <li>12th Pass with min 50% marks.</li>
+                                    <li>Recognized Board (10+2).</li>
+                                    <li>Max Age: 22 Years.</li>
                                 </ul>
                             </CardContent>
                         </Card>
@@ -312,7 +313,7 @@ export default function AcademicsPage() {
                  <Card>
                     <CardHeader>
                         <div className="flex items-center justify-between">
-                            <CardTitle className="text-2xl font-bold text-primary">Master of Computer Applications</CardTitle>
+                            <CardTitle className="text-2xl font-bold text-primary">Master of Computer Application (Data Science)</CardTitle>
                             <Badge variant="secondary">2 Years</Badge>
                         </div>
                         <CardDescription>Advanced Post-Graduate Program</CardDescription>
@@ -328,11 +329,11 @@ export default function AcademicsPage() {
                             </div>
                              <div className="p-4 bg-muted/30 rounded-lg">
                                 <h4 className="font-semibold">Intake</h4>
-                                <p className="text-sm text-muted-foreground">40 Seats</p>
+                                <p className="text-sm text-muted-foreground">20 Seats</p>
                             </div>
                             <div className="p-4 bg-muted/30 rounded-lg">
-                                <h4 className="font-semibold">Format</h4>
-                                <p className="text-sm text-muted-foreground">Full Time</p>
+                                <h4 className="font-semibold">Eligibility</h4>
+                                <p className="text-sm text-muted-foreground">Bachelor&apos;s (&gt;50%) + Maths (12th/Grad)</p>
                             </div>
                         </div>
                          <Button className="w-fit gap-2">
@@ -371,7 +372,8 @@ export default function AcademicsPage() {
                 <Card>
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold text-primary">Doctoral Program (Ph.D)</CardTitle>
-                        <CardDescription>Research in Computer Science & Scientific Spirituality</CardDescription>
+                        <Badge variant="secondary" className="mt-2 w-fit">Min 3 Years</Badge>
+                        <CardDescription className="mt-2">Research in Computer Science & Scientific Spirituality</CardDescription>
                     </CardHeader>
                     <CardContent className="space-y-6">
                         <p className="text-muted-foreground leading-relaxed">
@@ -388,11 +390,11 @@ export default function AcademicsPage() {
                                 </ul>
                             </div>
                             <div>
-                                <h4 className="font-bold mb-3 flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent"/> Admission Process</h4>
+                                <h4 className="font-bold mb-3 flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent"/> Admission Criteria</h4>
                                 <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground">
-                                    <li>University Entrance Examination</li>
-                                    <li>Personal Interview</li>
-                                    <li>Research Proposal Presentation</li>
+                                    <li>Master's Degree (min 55% marks).</li>
+                                    <li>Entrance Exam (2 Papers).</li>
+                                    <li>NET/M.Phil Exempt from Written Exam.</li>
                                 </ul>
                             </div>
                         </div>
@@ -402,6 +404,150 @@ export default function AcademicsPage() {
         </Tabs>
       </section>
       
+      {/* 2.5 Program Outcome & Assessment Criteria */}
+      <section className="bg-slate-900 text-white py-16 rounded-3xl overflow-hidden relative">
+          {/* Decorative Background Elements */}
+          <div className="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+             <GraduationCap className="h-64 w-64" />
+          </div>
+          <div className="absolute bottom-0 left-0 bg-accent/10 w-64 h-64 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
+
+          <div className="container max-w-6xl mx-auto px-6 relative z-10">
+              <div className="text-center mb-12">
+                   <div className="inline-flex items-center rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-bold text-accent mb-4 uppercase tracking-widest">
+                        Excellence in Education
+                    </div>
+                  <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">Program Outcome (PO) & Assessment</h2>
+                  <p className="text-slate-300 max-w-2xl mx-auto text-lg font-light">
+                      A comprehensive evaluation system designed to measure student learning and development through continuous assessment.
+                  </p>
+              </div>
+
+              <div className="grid lg:grid-cols-2 gap-12 items-start">
+                  
+                  {/* Left Column: Assessment Criteria List */}
+                  <div className="space-y-8">
+                       <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-2xl">
+                           <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
+                               <div className="p-2 bg-accent rounded-lg text-slate-900">
+                                   <CheckCircle2 className="h-5 w-5" />
+                               </div>
+                               Assessment Criteria
+                           </h3>
+                           <div className="space-y-4">
+                               {[
+                                   { icon: FileText, label: "Home Assignments", desc: "Regular evaluation of understanding." },
+                                   { icon: Book, label: "Group Discussions", desc: "Collaborative learning assessment." },
+                                   { icon: GraduationCap, label: "Seminar / Presentation", desc: "Communication & research skills." },
+                                   { icon: Clock, label: "Quiz", desc: "Quick knowledge checks." },
+                                   { icon: CheckCircle2, label: "Viva", desc: "Oral examination & critical thinking." },
+                                   { icon: User, label: "Attendance", desc: "Consistency & discipline." }
+                               ].map((item, idx) => (
+                                   <div key={idx} className="flex items-start gap-4 p-3 rounded-xl hover:bg-white/5 transition-colors group">
+                                       <div className="mt-1 p-1.5 rounded-full bg-slate-800 text-slate-400 group-hover:text-accent group-hover:bg-slate-900 transition-colors">
+                                            {/* We need to import User from lucide-react if not already available, using CheckCircle2 as fallback for now if simple map */}
+                                           <item.icon className="h-4 w-4" />
+                                       </div>
+                                       <div>
+                                           <h4 className="font-bold text-slate-200 group-hover:text-white transition-colors">{item.label}</h4>
+                                           <p className="text-xs text-slate-500 font-medium tracking-wide">{item.desc}</p>
+                                       </div>
+                                   </div>
+                               ))}
+                           </div>
+                       </div>
+                  </div>
+
+                  {/* Right Column: Evaluation Hierarchy Chart */}
+                  <div className="relative">
+                       <h3 className="text-xl font-bold mb-8 text-center flex items-center justify-center gap-2">
+                           Evaluation Scheme <span className="text-sm font-normal text-slate-400">(Total 100 Marks)</span>
+                       </h3>
+                       
+                       {/* Chart Representation */}
+                       <div className="flex flex-col items-center space-y-8">
+                           
+                           {/* Root */}
+                           <div className="relative z-10">
+                               <div className="bg-slate-800 border-2 border-accent text-accent px-8 py-3 rounded-xl font-bold shadow-[0_0_20px_rgba(253,200,44,0.15)]">
+                                   Total Marks (100)
+                               </div>
+                               {/* Branch Line */}
+                               <div className="absolute top-full left-1/2 w-0.5 h-8 bg-slate-700 -translate-x-1/2"></div>
+                           </div>
+
+                           {/* Branches Container */}
+                           <div className="grid grid-cols-2 gap-8 w-full relative">
+                               {/* Connector Line Horizontal */}
+                               <div className="absolute top-0 left-1/4 right-1/4 h-0.5 bg-slate-700 -translate-y-px"></div>
+                               
+                               {/* Formative Branch */}
+                               <div className="flex flex-col items-center relative">
+                                   <div className="w-0.5 h-6 bg-slate-700 absolute bottom-full left-1/2 -translate-x-1/2"></div>
+                                    <div className="bg-white text-slate-900 px-6 py-2 rounded-lg font-bold text-sm shadow-lg mb-6 relative group cursor-default">
+                                        Formative (40)
+                                        <div className="absolute top-full left-1/2 w-px h-6 bg-slate-700 -translate-x-1/2"></div>
+                                    </div>
+                                    
+                                    {/* Sub-branch Container Formative */}
+                                    <div className="relative w-full flex justify-center gap-4">
+                                         {/* Line for subs */}
+                                         <div className="absolute top-0 left-10 right-10 h-px bg-slate-700 -translate-y-px"></div>
+                                         
+                                         <div className="flex flex-col items-center mt-4">
+                                              <div className="w-px h-4 bg-slate-700 absolute -top-4"></div>
+                                              <div className="bg-slate-800 p-4 rounded-xl border border-slate-700 w-full max-w-[160px] text-center">
+                                                  <h5 className="text-accent text-xs font-bold uppercase mb-2">Classroom Assessment</h5>
+                                                  <p className="text-[10px] text-slate-400 leading-tight">Home Assignment, Quiz, Pres, GD, Viva</p>
+                                              </div>
+                                         </div>
+                                         
+                                          <div className="flex flex-col items-center mt-4">
+                                              <div className="w-px h-4 bg-slate-700 absolute -top-4"></div>
+                                              <div className="bg-slate-800 px-3 py-2 rounded-xl border border-slate-700">
+                                                  <h5 className="text-slate-300 text-xs font-bold">Attendance</h5>
+                                              </div>
+                                         </div>
+                                    </div>
+                               </div>
+
+                               {/* Summative Branch */}
+                               <div className="flex flex-col items-center relative">
+                                    <div className="w-0.5 h-6 bg-slate-700 absolute bottom-full left-1/2 -translate-x-1/2"></div>
+                                    <div className="bg-primary text-white px-6 py-2 rounded-lg font-bold text-sm shadow-lg mb-6 relative">
+                                        Summative (60)
+                                        <div className="absolute top-full left-1/2 w-px h-6 bg-slate-700 -translate-x-1/2"></div>
+                                    </div>
+
+                                     {/* Sub-branch Container Summative */}
+                                    <div className="relative w-full flex justify-center gap-4">
+                                         {/* Line for subs */}
+                                         <div className="absolute top-0 left-12 right-12 h-px bg-slate-700 -translate-y-px"></div>
+                                         
+                                         <div className="flex flex-col items-center mt-4">
+                                              <div className="w-px h-4 bg-slate-700 absolute -top-4"></div>
+                                              <div className="bg-slate-800 px-3 py-2 rounded-xl border border-slate-700 text-center">
+                                                  <h5 className="text-white text-xs font-bold">Mid-Term</h5>
+                                                  <span className="text-[10px] text-accent font-bold">(20)</span>
+                                              </div>
+                                         </div>
+                                         
+                                          <div className="flex flex-col items-center mt-4">
+                                              <div className="w-px h-4 bg-slate-700 absolute -top-4"></div>
+                                              <div className="bg-slate-800 px-3 py-2 rounded-xl border border-slate-700 text-center">
+                                                  <h5 className="text-white text-xs font-bold">End-Term</h5>
+                                                   <span className="text-[10px] text-accent font-bold">(40)</span>
+                                              </div>
+                                         </div>
+                                    </div>
+                               </div>
+                           </div>
+                       </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
       {/* 3. Academic Regulations Accordion */}
       <section className="max-w-4xl mx-auto space-y-8">
          <div className="text-center">

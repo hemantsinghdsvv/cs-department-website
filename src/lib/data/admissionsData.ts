@@ -1,138 +1,189 @@
 
-export interface AdmissionTimelineStep {
+import { CheckCircle, Calendar, GraduationCap } from "lucide-react";
+
+export interface ProgramInfo {
     id: string;
     title: string;
     description: string;
-    date: string;
-    status: "Upcoming" | "Active" | "Closed";
-}
-
-export interface ProgramEligibility {
-    id: string;
-    programName: string;
     degree: string;
     duration: string;
     intake: number;
-    criteria: string[];
+    eligibilityCriteria: string[];
+    highlights: string[];
     fees?: string;
 }
 
-export interface FAQ {
+export interface AdmissionTimelineStep {
     id: string;
-    question: string;
-    answer: string;
-    category: "General" | "Fees" | "Hostel" | "Exam";
+    title: string;
+    date: string;
+    description: string;
+    status: "completed" | "upcoming" | "Active" | "Closed";
 }
 
 export const admissionTimeline: AdmissionTimelineStep[] = [
     {
-        id: "step-1",
-        title: "Application Opens",
+        id: "t1",
+        title: "Application Availability",
+        date: "March 1, 2024",
         description: "Online application forms available on the university portal.",
-        date: "April 1, 2024",
-        status: "Active"
+        status: "completed"
     },
     {
-        id: "step-2",
-        title: "Entrance Exam",
-        description: "Departmental entrance test for PG programs and specialized UG courses.",
-        date: "May 15, 2024",
-        status: "Upcoming"
+        id: "t2",
+        title: "Last Date to Apply",
+        date: "June 15, 2024",
+        description: "Deadline for submission of online applications.",
+        status: "upcoming"
     },
     {
-        id: "step-3",
-        title: "Interview / Counseling",
-        description: "Personal interview for shortlisted candidates.",
-        date: "June 10, 2024",
-        status: "Upcoming"
+        id: "t3",
+        title: "Entrance Examination",
+        date: "June 30, 2024",
+        description: "DSVV Common Entrance Test (CET) at designated centers.",
+        status: "upcoming"
     },
     {
-        id: "step-4",
-        title: "Final Admission List",
-        description: "Release of merit list and fee submission.",
-        date: "June 25, 2024",
-        status: "Upcoming"
+        id: "t4",
+        title: "Interview Rounds",
+        date: "July 10-15, 2024",
+        description: "Personal interviews for shortlisted candidates.",
+        status: "upcoming"
+    },
+    {
+        id: "t5",
+        title: "Final Merit List",
+        date: "July 20, 2024",
+        description: "Declaration of results and admission offers.",
+        status: "upcoming"
     }
 ];
 
-export const programsInfo: ProgramEligibility[] = [
+export const programsInfo: ProgramInfo[] = [
     {
-        id: "bsc-it",
-        programName: "B.Sc. in Information Technology",
-        degree: "Undergraduate",
-        duration: "4 Years (NEP 2020)",
+        id: "p1",
+        title: "Master of Computer Applications (MCA)",
+        degree: "Postgraduate",
+        description: "A two-year advanced degree focusing on software development, cloud computing, and AI.",
+        duration: "2 Years",
         intake: 60,
-        criteria: [
-            "10+2 with Mathematics/Computer Science from a recognized board.",
-            "Minimum 50% aggregate marks.",
-            "Maximum age limit: 21 years."
+        eligibilityCriteria: [
+            "BCA / B.Sc (CS/IT) or Bachelor Degree with Maths.",
+            "Min 50% marks in graduation.",
+            "Valid score in DSVV Entrance Test."
         ],
-        fees: "₹ 35,000 per semester"
+        highlights: ["Industry-aligned Curriculum", "AI & ML Specialization", "Research Projects"],
+        fees: "₹ 60,000 / Year"
     },
     {
-        id: "bca",
-        programName: "Bachelor of Computer Applications (BCA)",
+        id: "p2",
+        title: "Bachelor of Computer Applications (BCA)",
         degree: "Undergraduate",
+        description: "Foundation course in computer applications, programming, and software engineering.",
         duration: "3 Years",
         intake: 60,
-        criteria: [
-            "10+2 in any stream with Mathematics as a subject.",
-            "Minimum 50% aggregate marks.",
-            "Basic proficiency in English."
+        eligibilityCriteria: [
+            "10+2 with Mathematics/Computer Science.",
+            "Min 50% aggregate marks.",
+            "Interview round qualification."
         ],
-        fees: "₹ 40,000 per semester"
+        highlights: ["Programming Foundation", "Web Development", "Soft Skills Training"],
+        fees: "₹ 45,000 / Year"
     },
     {
-        id: "mca",
-        programName: "Master of Computer Applications (MCA)",
-        degree: "Postgraduate",
-        duration: "2 Years",
-        intake: 45,
-        criteria: [
-            "BCA / B.Sc (CS/IT) / B.Tech or equivalent degree.",
-            "Minimum 55% aggregate marks.",
-            "Must have studied Mathematics at 10+2 or Graduation level."
+        id: "p3",
+        title: "B.Sc. in Information Technology",
+        degree: "Undergraduate",
+        description: "Focuses on IT infrastructure, networking, and system administration.",
+        duration: "3 Years",
+        intake: 60,
+        eligibilityCriteria: [
+            "10+2 with Science stream (PCM).",
+            "Min 50% aggregate marks."
         ],
-        fees: "₹ 50,000 per semester"
+        highlights: ["Network Security", "Database Management", "Hardware Labs"],
+        fees: "₹ 40,000 / Year"
     },
     {
-        id: "phd",
-        programName: "Ph.D. in Computer Science",
+        id: "p4",
+        title: "Ph.D. in Computer Science",
         degree: "Doctoral",
+        description: "Research program in domains like AI, IKS, Quantum Computing, and Data Science.",
         duration: "3-5 Years",
         intake: 10,
-        criteria: [
-            "Master's degree in CS/IT/Applications with 55% marks.",
-            "Valid score in GATE / UGC-NET / University Entrance Exam.",
+        eligibilityCriteria: [
+            "MCA / M.Tech / M.Sc (CS).",
+            "NET/GATE qualification preferred.",
             "Research proposal presentation."
         ],
-        fees: "₹ 25,000 per semester"
+        highlights: ["Advanced Research Labs", "Patent Support", "Publication Grants"]
     }
 ];
 
-export const faqs: FAQ[] = [
+export const faqs = [
     {
-        id: "faq-1",
-        category: "General",
-        question: "Is the detailed syllabus available online?",
-        answer: "Yes, you can download the detailed syllabus for all semesters from the 'Resources' section or the 'Academics' page."
+        id: "f1",
+        question: "What is the eligibility for BCA?",
+        answer: "10+2 with Mathematics or Computer Science as a core subject with minimum 50% aggregate marks."
     },
     {
-        id: "faq-2",
-        category: "Hostel",
-        question: "Is hostel accommodation mandatory?",
-        answer: "DSVV is a fully residential campus. Hostel accommodation is generally mandatory for regular students to ensure holistic development."
+        id: "f2",
+        question: "Is there an entrance exam?",
+        answer: "Yes, candidates must clear the DSVV Common Entrance Test (CET) followed by an interview."
     },
     {
-        id: "faq-3",
-        category: "Fees",
-        question: "Are there any scholarship options available?",
-        answer: "Yes, the university offers merit-based scholarships and financial aid for economically weaker sections. Details are available in the admission brochure."
+        id: "f3",
+        question: "Are there scholarships available?",
+        answer: "Yes, merit-based and need-based scholarships are available for deserving students."
     },
     {
-        id: "faq-4",
-        category: "Exam",
-        question: "What is the pattern of the Entrance Exam?",
-        answer: "The entrance exam consists of multiple-choice questions covering General Aptitude, Mathematics, and Computer Science basics."
+        id: "f4",
+        question: "What about International Admissions?",
+        answer: "International students can apply directly through the International Relations Cell. A valid passport and student visa are mandatory. IELTS/TOEFL scores may be required for non-native English speakers."
+    },
+    {
+        id: "f5",
+        question: "Is hostel facility available?",
+        answer: "Yes, DSVV is a fully residential campus. Hostel accommodation is mandatory and provided to all regular students."
     }
 ];
+
+export const entranceExamDetails = {
+    books: [
+        {
+            category: "General Knowledge & Current Affairs",
+            items: ["Lucent's General Knowledge", "Yearbook 2023", "Daily Newspapers"]
+        },
+        {
+            category: "English Proficiency",
+            items: ["Wren & Martin Grammar", "Word Power Made Easy", "Reading Comprehension"]
+        },
+        {
+            category: "Computer Science (For MCA)",
+            items: ["Digital Logic", "C Programming", "Data Structures", "Operating System Basics"]
+        },
+        {
+            category: "Mission & Culture (DSVV Specific)",
+            items: ["Books by Pt. Shriram Sharma Acharya", "Indian Culture & Heritage Basics"]
+        }
+    ],
+    patterns: {
+         "Undergraduate (BCA/B.Sc IT)": {
+            title: "Undergraduate Entrance Pattern",
+            duration: "90 Minutes",
+            interview: true,
+            sections: ["General Knowledge (20%)", "English (20%)", "Mathematics/Logic (30%)", "Mission & Culture (30%)"]
+        },
+        "Postgraduate (MCA)": {
+            title: "Postgraduate Entrance Pattern",
+             duration: "120 Minutes",
+             interview: true,
+            sections: ["Computer Awareness (40%)", "Reasoning & Aptitude (20%)", "English (20%)", "Mission & Culture (20%)"]
+        }
+    },
+    note: [
+        "The entrance exam is conducted offline at the university campus and designated centers.",
+        "Interview round is mandatory for final selection.",
+        "Calculators and electronic devices are prohibited in the exam hall."
+    ]
+};

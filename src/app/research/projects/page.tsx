@@ -57,9 +57,11 @@ export default function ProjectsPage() {
                                                 <IndianRupee className="h-4 w-4 text-slate-400" />
                                                 <span>Grant: <span className="text-slate-900 font-medium">{project.amount}</span></span>
                                             </div>
-                                            <div className="pt-4 border-t border-slate-100">
-                                                PI: <span className="font-medium text-primary">{project.principalInvestigator}</span>
-                                            </div>
+                                            {project.principalInvestigator && (
+                                                <div className="pt-4 border-t border-slate-100">
+                                                    PI: <span className="font-medium text-primary">{project.principalInvestigator}</span>
+                                                </div>
+                                            )}
                                         </CardContent>
                                     </Card>
                             ))}

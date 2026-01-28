@@ -7,7 +7,7 @@ import { researchAreas, publications, labs } from "@/lib/data/researchData";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, BrainCircuit, ShieldCheck, Database, Cpu, Microscope, Lightbulb, FileText, Globe } from "lucide-react";
+import { ArrowRight, BrainCircuit, ShieldCheck, Database, Cpu, Microscope, Lightbulb, FileText, Globe, BookOpen, TrendingUp, Copyright } from "lucide-react";
 
 // Helper to map string icon names to components
 const iconMap: Record<string, any> = {
@@ -54,20 +54,22 @@ export default function ResearchPage() {
                 {/* Stats Strip */}
                 <div className="border-t border-white/10 bg-black/20 backdrop-blur-sm">
                     <div className="container max-w-7xl mx-auto px-4 py-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
                             {[
-                                { label: "Research Labs", value: "4+", icon: Microscope },
-                                { label: "Publications", value: "150+", icon: FileText },
-                                { label: "Funded Projects", value: "12+", icon: Globe },
-                                { label: "Patents Filed", value: "5", icon: Lightbulb },
+                                { label: "Research Papers", value: "108", icon: FileText },
+                                { label: "Books", value: "15", icon: BookOpen },
+                                { label: "Patents", value: "19", icon: Lightbulb },
+                                { label: "Projects", value: "12", icon: Globe },
+                                { label: "Total H-index", value: "31", icon: TrendingUp },
+                                { label: "Copyrights", value: "12", icon: Copyright },
                             ].map((stat, i) => (
-                                <div key={i} className="flex items-center gap-4">
-                                    <div className="h-12 w-12 rounded-lg bg-white/5 flex items-center justify-center border border-white/10">
-                                        <stat.icon className="h-6 w-6 text-accent" />
+                                <div key={i} className="flex flex-col items-center gap-3 text-center group">
+                                    <div className="h-14 w-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-accent group-hover:text-slate-900 transition-all duration-300 shadow-lg shadow-black/10">
+                                        <stat.icon className="h-6 w-6 text-accent group-hover:text-slate-900 transition-colors" />
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-bold font-heading">{stat.value}</div>
-                                        <div className="text-sm text-slate-400">{stat.label}</div>
+                                        <div className="text-3xl font-bold font-heading mb-1">{stat.value}</div>
+                                        <div className="text-xs text-slate-400 font-medium uppercase tracking-wider">{stat.label}</div>
                                     </div>
                                 </div>
                             ))}

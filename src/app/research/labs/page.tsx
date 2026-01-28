@@ -32,6 +32,11 @@ export default function ResearchLabsPage() {
                             />
                         </div>
                         <CardHeader>
+                            <div className="flex justify-between items-start mb-2">
+                                <Badge variant={lab.type === 'Development Cell' ? "secondary" : "default"} className="mb-1">
+                                    {lab.type || "Research Lab"}
+                                </Badge>
+                            </div>
                             <CardTitle className="text-2xl font-bold text-slate-900">{lab.name}</CardTitle>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground pt-1">
                                 <User className="h-4 w-4 text-accent" />

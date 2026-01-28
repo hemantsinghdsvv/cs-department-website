@@ -1,5 +1,5 @@
 
-import { ProgramEligibility } from "@/lib/data/admissionsData";
+import { ProgramInfo } from "@/lib/data/admissionsData";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Users, IndianRupee, Clock } from "lucide-react";
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface EligibilityCardProps {
-    program: ProgramEligibility;
+    program: ProgramInfo;
 }
 
 export default function EligibilityCard({ program }: EligibilityCardProps) {
@@ -21,7 +21,7 @@ export default function EligibilityCard({ program }: EligibilityCardProps) {
                     </Badge>
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 leading-tight min-h-[3rem]">
-                    {program.programName}
+                    {program.title}
                 </h3>
             </CardHeader>
             <CardContent className="flex-grow space-y-4">
@@ -33,7 +33,7 @@ export default function EligibilityCard({ program }: EligibilityCardProps) {
                 <div className="space-y-2">
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Eligibility Criteria</p>
                     <ul className="space-y-2">
-                        {program.criteria.map((req, i) => (
+                        {program.eligibilityCriteria.map((req, i) => (
                             <li key={i} className="flex items-start gap-2 text-sm text-slate-600">
                                 <Check className="h-4 w-4 text-green-500 mt-0.5 shrink-0" />
                                 <span className="leading-snug">{req}</span>

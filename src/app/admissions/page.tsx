@@ -2,7 +2,7 @@
 "use client";
 
 import Link from "next/link";
-import { admissionTimeline, programsInfo, faqs } from "@/lib/data/admissionsData";
+import { admissionTimeline, programsInfo, faqs, entranceExamDetails } from "@/lib/data/admissionsData";
 import Timeline from "@/components/admissions/Timeline";
 import EligibilityCard from "@/components/admissions/EligibilityCard";
 import { 
@@ -23,7 +23,9 @@ import {
     GraduationCap,
     ArrowRight,
     FileText,
-    User
+    User,
+    BookOpen,
+    Clock
 } from "lucide-react";
 
 export default function AdmissionsPage() {
@@ -123,7 +125,83 @@ export default function AdmissionsPage() {
                 </div>
             </section>
 
-            {/* 5. FAQs */}
+            {/* 6. Entrance Exam Details (New) */}
+            <section className="py-20 bg-white">
+                <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <h2 className="text-3xl font-heading font-bold text-primary mb-2">Entrance Exam Procedure</h2>
+                        <p className="text-slate-500">
+                            Understanding the examination pattern and preparing with the right resources.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12">
+                        {/* Suggested Books */}
+                        <Card className="border-none shadow-lg bg-yellow-50/50">
+                            <CardContent className="p-8">
+                                <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                                    <BookOpen className="h-5 w-5 text-accent" /> Suggested Books & Topics
+                                </h3>
+                                <div className="space-y-6">
+                                    {entranceExamDetails.books.map((cat, i) => (
+                                        <div key={i}>
+                                            <h4 className="font-semibold text-slate-800 mb-2">{cat.category}</h4>
+                                            <ul className="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                                {cat.items.map((item, j) => (
+                                                    <li key={j}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    ))}
+                                </div>
+                            </CardContent>
+                        </Card>
+
+                        {/* Exam Pattern */}
+                        <div className="space-y-6">
+                            {Object.entries(entranceExamDetails.patterns).map(([key, pattern], i) => (
+                                <Card key={i} className="border-slate-100 shadow-md">
+                                    <CardContent className="p-6">
+                                        <h4 className="font-bold text-lg text-primary mb-2">{pattern.title}</h4>
+                                        <div className="flex flex-wrap gap-4 text-sm text-slate-500 mb-4">
+                                            <span className="flex items-center gap-1 bg-slate-100 px-2 py-1 rounded">
+                                                <Clock className="h-3 w-3" /> {pattern.duration}
+                                            </span>
+                                            {pattern.interview && (
+                                                <span className="flex items-center gap-1 bg-green-50 text-green-700 px-2 py-1 rounded">
+                                                    <CheckCircle className="h-3 w-3" /> Interview Round
+                                                </span>
+                                            )}
+                                        </div>
+                                        <div className="space-y-2">
+                                            <p className="text-sm font-semibold text-slate-700">Exam Sections:</p>
+                                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-slate-600">
+                                                {pattern.sections.map((sec, j) => (
+                                                    <li key={j} className="flex items-start gap-2">
+                                                        <div className="h-1.5 w-1.5 rounded-full bg-accent mt-1.5 shrink-0"></div>
+                                                        {sec}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+
+                            <div className="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                                <h4 className="font-bold text-sm text-slate-900 mb-2">Important Note:</h4>
+                                <ul className="list-disc list-inside text-xs text-slate-500 space-y-1">
+                                    {entranceExamDetails.note.map((note, i) => (
+                                        <li key={i}>{note}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 7. FAQs */}
             <section className="py-20 container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
                 <div className="text-center">
                     <h2 className="text-3xl font-heading font-bold text-primary mb-2">Frequently Asked Questions</h2>
