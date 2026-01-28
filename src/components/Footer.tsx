@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Youtube, MapPin, Phone, Mail, ArrowRight } f
 
 export function Footer() {
   return (
-    <footer className="w-full bg-slate-950 text-slate-300 pt-20 pb-10 border-t border-slate-800">
+    <footer className="w-full bg-slate-950 text-slate-300 pt-12 md:pt-20 pb-10 border-t border-slate-800">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
         
         {/* Brand Column */}

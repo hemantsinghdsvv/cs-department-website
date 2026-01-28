@@ -38,7 +38,7 @@ export default async function Home() {
             </div>
             
             {/* Heading */}
-            <h1 className="text-5xl font-heading font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl drop-shadow-2xl leading-tight">
+            <h1 className="text-3xl font-heading font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl drop-shadow-2xl leading-tight">
               Excellence in <br className="hidden md:block"/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">
                 Computer Science
@@ -67,7 +67,7 @@ export default async function Home() {
 
 
       {/* Department Overview Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50/50 border-b border-slate-100 overflow-hidden">
+      <section className="py-12 md:py-24 bg-gradient-to-b from-white to-slate-50/50 border-b border-slate-100 overflow-hidden">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center gap-16">
             
             {/* Image Column */}
@@ -278,7 +278,7 @@ export default async function Home() {
       </section>
 
       {/* Informational Cards Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 md:py-24 bg-slate-50">
         <div className="container max-w-7xl mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
              <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-bold text-primary mb-4">
